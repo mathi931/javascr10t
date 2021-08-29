@@ -1,0 +1,62 @@
+{
+    "colors": [
+        {
+            "color": "#c2ff3d"
+        },
+        {
+            "color": "#ff3de8"
+        },
+        {
+            "color": "#3dc2ff"
+        },
+        {
+            "color": "#04e022"
+        },
+        {
+            "color": "#bc83e6"
+        },
+        {
+            "color": "#ebb328"
+        }
+    ],
+    "degrees":[
+        {
+            "degree":"rotate(1deg)"
+        },
+        {
+            "degree":"rotate(3deg)"
+        },
+        {
+            "degree":"rotate(5deg)"
+        },
+        {
+            "degree":"rotate(-1deg)"
+        },
+        {
+            "degree":"rotate(-3deg)"
+        },
+        {
+            "degree":"rotate(-5deg)"
+        }
+    ],
+    "margins":[
+        {
+            "margin":"1px"
+        },
+        {
+            "margin":"5px"
+        },
+        {
+            "margin":"7px"
+        },
+        {
+            "margin":"10px"
+        },
+        {
+            "margin":"-5px"
+        },
+        {
+            "margin":"-7px"
+        }
+    ]
+}
