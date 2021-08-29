@@ -1,5 +1,6 @@
 //on window load opens the new note tab for the user
 window.onload = document.querySelector('#user_input').select();
+
 //the input what has 2 events on click to show and hide
 const newNoteTab = document.querySelector('#modal');
 const input = document.querySelector('#user_input');
@@ -12,6 +13,7 @@ document.querySelector('#add_note').addEventListener('click', () => {
 document.querySelector('#hide').addEventListener('click', () => {
 	newNoteTab.style.display = 'none';
 });
+
 //if the user put the input in and hit enter it trigers the api request what creates the note
 //after enter press event closes the new note tab and resets the text value
 input.addEventListener('keydown', (event) => {
@@ -22,6 +24,7 @@ input.addEventListener('keydown', (event) => {
 		newNoteTab.style.display = 'none';
 	}
 });
+
 //gets the data and then uses to create the note
 async function createStickyNote(text) {
 	await fetch('./data.json')
