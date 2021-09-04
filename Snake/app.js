@@ -1,3 +1,20 @@
+//api request query
+const QUERY =
+	'https://api.unsplash.com/photos/random?query=snake&orientation=landscape&client_id=SHlu-fKvhg7ulutGx8_Sjk9f0Vg5HAILj1n2YTuiGTA';
+
+//load event
+window.addEventListener('load', getImage());
+
+//get a random image
+function getImage() {
+	fetch(QUERY)
+		.then((res) => res.json())
+		.then((data) => {
+			document.body.style.backgroundImage = `url(\'${data.urls.full}\')`;
+		})
+		.catch((error) => console.log(error));
+}
+
 //game board
 const canvas = document.getElementById('board');
 const context = canvas.getContext('2d');
@@ -21,6 +38,7 @@ let apple = {
 	x: Math.floor(Math.random() * 21) * 10,
 	y: Math.floor(Math.random() * 21) * 10,
 };
+
 //each snake part
 const snake = [
 	{ x: 200, y: 200 },
@@ -33,6 +51,17 @@ class SnakePart {
 		this.y = y;
 	}
 }
+//gets random color
+function getColor() {
+	fetch('https://placekitten.com/1280/1024')
+		.then((res) => {
+			res.json();
+		})
+		.then((data) => {
+			console.log(data);
+		});
+}
+
 //the game loop
 function gameLoop() {
 	if (gameOver()) {
@@ -175,22 +204,17 @@ function keyDown(e) {
 }
 //set up speed
 function speedSetUp() {
-	if(snake.length > 5 && snake.length < 7){
+	if (snake.length > 5 && snake.length < 7) {
 		speed = 10;
-	}
-	else if(snake.length>7 && snake.length < 9){
+	} else if (snake.length > 7 && snake.length < 9) {
 		speed = 13;
-	}
-	else if(snake.length>9 && snake.length < 11){
+	} else if (snake.length > 9 && snake.length < 11) {
 		speed = 17;
-	}
-	else if(snake.length>11 && snake.length < 13){
+	} else if (snake.length > 11 && snake.length < 13) {
 		speed = 22;
-	}
-	else if(snake.length > 13){
+	} else if (snake.length > 13) {
 		speed = 25;
 	}
-
 }
 //draw the score
 function fillScore() {

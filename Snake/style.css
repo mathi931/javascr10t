@@ -7,14 +7,16 @@ body {
 	min-width: 100vh;
 	font-family: 'Abel', sans-serif;
 	font-weight: 400;
-	background-color: rgb(97, 107, 138);
 	color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(56, 100, 56);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-position: center center;
+	background-size: cover;
 }
-canvas{
-	box-shadow: 9px 13px 23px 11px rgba(0,0,0,0.63); 
+canvas {
+	box-shadow: 9px 13px 23px 11px rgba(0, 0, 0, 0.726);
 }
