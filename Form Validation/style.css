@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Abel', sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
+	background-color: rgb(124, 132, 158);
+	min-height: 100vh;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#title {
+	font-size: 2.5rem;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(107, 121, 163, 0.212);
+	width: 50vh;
+	border: 2px solid rgba(107, 121, 163, 0.459);
+	border-radius: 3px;
+	-webkit-box-shadow: 7px 10px 19px 3px rgba(0, 0, 0, 0.82);
+	box-shadow: 7px 10px 19px 3px rgba(0, 0, 0, 0.493);
+}
+input {
+	font-size: 1rem;
+	border: 2px solid #f0f0f08e;
+	border-radius: 4px;
+	display: block;
+	color: white;
+	background-color: rgb(97, 107, 138);
+	padding: 0.5rem 1rem;
+	width: 100%;
+	outline: none;
+}
+input:focus {
+	outline: 0;
+	border-color: #f0f0f0e3;
+}
+input::placeholder {
+	color: rgba(255, 255, 255, 0.438);
+}
+button {
+	color: white;
+	background-color: rgb(97, 107, 138);
+	outline: none;
+	border: 2px solid rgba(255, 255, 255, 0.63);
+	border-radius: 4px;
+	font-size: 1.5rem;
+	width: 14.5rem;
+	padding: 0.2rem;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: center;
+}
+button:hover {
+	cursor: pointer;
+}
+p {
+	visibility: hidden;
+	font-size: 0.7rem;
+	position: absolute;
+	bottom: 0.3rem;
+	left: 0;
+}
+.input-container {
+	position: relative;
+	padding-bottom: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+.input-container label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.input-container i {
+	position: absolute;
+	top: 2.7rem;
+	right: 1rem;
+	visibility: hidden;
+}
+.correct input {
+	border: 2px solid rgb(54, 168, 73);
+}
+.correct i.fa-check-circle {
+	visibility: visible;
+	color: rgb(54, 168, 73);
+}
+.wrong input {
+	border: 2px solid rgb(245, 93, 93);
+}
+.wrong i.fa-exclamation-circle {
+	visibility: visible;
+	color: rgb(245, 93, 93);
+}
+.wrong p {
+	color: rgb(245, 93, 93);
+	visibility: visible;
+}
